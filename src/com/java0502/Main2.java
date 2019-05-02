@@ -7,34 +7,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Main2
- */
 @WebServlet("/Main2")
 public class Main2 extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Main2() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+		// url : http://localhost:8080/201905/Main2?a=1&b=2 커리스트링
+		
+		String a = request.getParameter("a"); // a 변수 : a = 1;
+		String b = request.getParameter("b"); // b 변수 : b = 2;
+		String cc = request.getParameter("c");
+		
+		System.out.println(cc);
+		
+		String c = a+b; // 12
+		System.out.println(c);
+		
+		int d = Integer.parseInt(a) + Integer.parseInt(b);  // 12(문자열) -> 3(정수) 형변환
+		System.out.println(d);
+		
+		response.getWriter().print(c + ", " + d);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		doGet(request, response);
 	}
 

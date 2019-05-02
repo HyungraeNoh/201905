@@ -7,22 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Main") // URL :  http://localhost:8080/201904/Main
+@WebServlet("/Main") // URL : http://localhost:8080/201905/Main을 정의한 것.
 public class Main extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
-	public Main() {
-	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doGet");
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("업데이트");
-	}
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
+		response.getWriter().print("안녕하세요.");
 	}
 
 }
