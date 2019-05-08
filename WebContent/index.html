@@ -6,20 +6,34 @@
 </head>
 	<body>
 			
-			<h2>사용자 입력</h2>
-			<form action="http://localhost:8080/201905/Main9.jsp" method ="get">
+			<h2>학생 추가</h2>
+			<form action="http://localhost:8080/201905/Main11.jsp" >
 			<input type="text"name="name" placeholder = " 이 름 "><br>
-			<input type="number"name="age"placeholder = " 나 이 "><br>
-			<input type="number"name="tall"placeholder = " 키 "><br>
-			<input type="number"name="weight"placeholder = " 몸무게 "><br>
-			<input type="submit"value="저장">
+			<input type="text"name="gender"placeholder = " 성 별 "><br>
+			<input type="text"name="id"placeholder = " ID "><br>
+			<input type="text"name="pw"placeholder = " 비밀번호 "><br>
+			<input type="submit"value="학생추가">
 			</form>
 			
 			<hr>
-			<h2>사용자 검색</h2>
-			<form action="http://localhost:8080/201905/Main9.jsp" method ="post">
-			<input type="text"name="rename" placeholder = " 이 름 "><br>
-			<input type="submit"value="확인하기">
+			<h2>학생 검색</h2>
+			<form action="http://localhost:8080/201905/Main11.jsp" >
+			<input type="text"name="name2" placeholder = " 이 름 "><br>
+			<input type="submit"value="학생검색">
 			</form>
-
+			
+			<hr>
+			<h2>학생 수정</h2>
+			<form action="http://localhost:8080/201905/Main11.jsp" >
+			<input type="text"name="name3" placeholder = " 이 름 "><br>
+			<input type="submit"value="학생수정">
+			</form>
+			
+			<hr>
+			<h2>학생 삭제</h2>
+			<form action="http://localhost:8080/201905/Main11.jsp" >
+			<input type="text"name="name4" placeholder = " 이 름 "><br>
+			<input type="submit"value="학생삭제">
+			</form>
+			
 	</body>
