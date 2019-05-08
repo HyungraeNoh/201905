@@ -50,15 +50,18 @@ public class Main6 extends HttpServlet {
 		}
 		
 		String name = request.getParameter("name");
-	
+		boolean check = true;
 		for(int i = 0 ; i <사용자목록.size(); i++) {
 			if(사용자목록.get(i).get이름().equals(name)) {
 				response.getWriter().print("<br>이름  : " + 사용자목록.get(i).get이름());
 				response.getWriter().print("<br>나이  : " +사용자목록.get(i).get나이());
 				response.getWriter().print("<br>키   : " +사용자목록.get(i).get키());
 				response.getWriter().print("<br>몸무게 : " +사용자목록.get(i).get몸무게());
-				
+				check = false;
 			}
+		}
+		if(check) { //한번만 나타나게 해주기위해서 else를 쓰지 않고 밖으로 빼내서 따로 한번만 사용한다.
+				response.getWriter().print("검색한 이름 : "+ name + "은 사용자 목록에 없습니다.");
 		}
 	}
 
