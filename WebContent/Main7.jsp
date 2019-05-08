@@ -20,7 +20,6 @@
 		pw.println(request.getContentType());
 		pw.println(request.getQueryString());
 		pw.println(request.getRemotePort());
-
 %>
 </body>
 </html>
